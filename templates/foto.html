@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %} G1B spletna stran {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Fotogalerija</h1><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="/assets/custom/images/fotogalerija/vegova.png"
+                       data-lightbox="ninja"
+                    data-title="Example 1">
+                        <img class="img-responsive"
+                             src="/assets/custom/images/fotogalerija/vegova.png">
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <a href="/assets/custom/images/fotogalerija/arduino.jpg"
+                       data-lightbox="ninja"
+                        data-title="Example 2">
+                        <img class="img-responsive"
+                             src="/assets/custom/images/fotogalerija/arduino.jpg">
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <a href="/assets/custom/images/fotogalerija/computer.jpg"
+                       data-lightbox="ninja"
+                    data-title="Example 3">
+                        <img class="img-responsive"
+                             src="/assets/custom/images/fotogalerija/computer.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
