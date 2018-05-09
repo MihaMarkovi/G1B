@@ -1,0 +1,5 @@
+Jinja2==2.10
+webapp2==2.5.2
+emoji==0.5.0
+protobuf==3.5.2.post1
+WebTest==2.0.29

@@ -12,5 +12,11 @@ class Chat(ndb.Model):
     def create(cls, content, user):
         chat = cls(content=content, author_email=user.email(), author_nickname=user.nickname())
         chat.put()
+        return chat
+
+    @classmethod
+    def delete(cls, chat):
+        chat.deleted=True
+        chat.put()
 
         return chat

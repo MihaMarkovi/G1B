@@ -16,7 +16,7 @@
     <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-        <!-- Lightbox -->
+    <!-- Lightbox -->
     <link href="/assets/lightbox/css/lightbox.css" rel="stylesheet">
 </head>
 
@@ -25,51 +25,58 @@
 {% if cookies %}
 
 {% else %}
-<div class="alert alert-warning" role="alert">
-    Hey, we use cookies. Do you accept them? :)
-    <form action="/set-cookie" method="post">
-        <button class="btn btn-success btn-xs">I accept</button>
-    </form>
+<div class="navbar navbar-fixed-bottom" style="width: 30%; margin-left: auto">
+    <div class="alert alert-warning" role="alert">
+        Hey, we use cookies. Do you accept them? :)
+        <form action="/set-cookie" method="post">
+            <button class="btn btn-success btn-xs">I accept</button>
+        </form>
+    </div>
 </div>
 {% endif %}
 
 
-<div class="container">
-    <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">G1B Webpage Beta 1</a>
-                </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">G1B Webpage Beta 1</a>
+        </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/fotogalerija"> Fotogalerija </a></li>
-                         {% if logout_url %}
-                        <li><a href="#">{{ user.nickname() }}</a></li>
-                        <li><a href="/forum">Chat</a></li>
-                        <li><a href="{{ logout_url }}">Logout</a></li>
-                        {% elif login_url %}
-                        <li><a href="{{ login_url }}">Login</a></li>
-                        {% endif %}
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-    </div>
-</div>
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/about">About</a></li>
+                <li><a href="/fotogalerija"> Fotogalerija </a></li>
+                {% if logout_url %}
+                <li><a href="#">{{ user.nickname() }}</a></li>
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="{{ logout_url }}">Logout</a></li>
+                {% elif login_url %}
+                <li><a href="{{ login_url }}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 {%block content%}{%endblock content%}
+{% for _ in range(1, 20) %}
+<br>
+{% endfor %}
+
+<footer style="color: #d9edf7">
+    <p>Avtor: Miha Markovič, G1B, šolsko leto 2017/18</p>
+    <div class="container text-center">
+        <p>Copyright &copy; G1B Official 2018</p>
+    </div>
+</footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

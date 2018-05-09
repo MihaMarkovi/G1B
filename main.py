@@ -9,5 +9,5 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/set-cookie', CookieAlertHandler, name="cookie-alert"),
     webapp2.Route('/about', AboutHandler, name="about-page"),
     webapp2.Route('/fotogalerija', FotoHandler, name="foto-page"),
-    webapp2.Route('/forum', Chats, name="chat-page"),
+    webapp2.Route('/chat', Chats, name="chat-page"),
 ], debug=True)

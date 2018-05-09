@@ -2,129 +2,237 @@
 {% block title %} G1B spletna stran {% endblock title %}
 
 {% block content %}
-
 <div class="container">
     <div class="jumbotron" id="main-page-jumbotron">
-        <img style="width:1000px" src="/assets/custom/images/quote/skupna.jpg">
+        <div class="container">
+            <img style="width:90%; border-radius: 20%" src="/assets/custom/images/quote/skupna.jpg">
+        </div>
         <h1>Dobrodošli na uradni spletni strani razreda G1B Vegova 2017/18</h1>
         <button class="btn btn-info"><a href="/about" style="color: white;">Learn more</a></button>
     </div>
 </div>
+<div class="container">
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class='col-md-offset-2 col-md-8 text-center'>
+                    <h2>Kdo smo</h2>
+                </div>
+            </div>
+
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <!-- Bottom Carousel Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#quote-carousel" data-slide-to="1"></li>
+                    <li data-target="#quote-carousel" data-slide-to="2"></li>
+                    <li data-target="#quote-carousel" data-slide-to="3"></li>
+                    <li data-target="#quote-carousel" data-slide-to="4"></li>
+                    <li data-target="#quote-carousel" data-slide-to="5"></li>
+                </ol>
+                <!-- Carousel Slides / Quotes -->
+                <div class="carousel-inner">
+
+                    <!-- Quote 1 -->
+                    <div class="item active">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="/assets/custom/images/quote/suske.jpg"
+                                         style="width: 100px;height:100px;">
+                                    <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>PUBG player!</p>
+                                    <small>Nik Šuster</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 2 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="/assets/custom/images/quote/stojcic.jpg"
+                                         style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>Razredni zapohanc</p>
+                                    <small>Dušan Stojčić</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 3 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="/assets/custom/images/quote/wagner.jpg"
+                                         style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>Naš predsednik med obedom</p>
+                                    <small>Oliver Wagner</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 4 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="/assets/custom/images/quote/maksi.jpg"
+                                         style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>Brez komentarja</p>
+                                    <small>Maks Kovačič</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 5 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="/assets/custom/images/quote/papi.jpg"
+                                         style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>Razredna maskota</p>
+                                    <small>Jernej Chvatal</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <!-- Quote 6 -->
+                    <div class="item">
+                        <blockquote>
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img class="img-circle" src="/assets/custom/images/quote/sverko.jpg"
+                                         style="width: 100px;height:100px;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>Koliko lukenj je v enem kilogramu sira?</p>
+                                    <small>Gašper Šverko</small>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Carousel Buttons Next/Prev -->
+                <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i
+                        class="fa fa-chevron-left"></i></a>
+                <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i
+                        class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
-  <div class="row">
-    <div class='col-md-offset-2 col-md-8 text-center'>
-    <h2>Kdo smo</h2>
+    <div class="jumbotron">
+        <h1>Seznam najbolj priljubljenih dijakov</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ime</th>
+                <th scope="col">Priimek</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Jernej</td>
+                <td>Chvatal</td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Aljaž</td>
+                <td>Gorup</td>
+
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Tim</td>
+                <td>Plevčak</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Maks</td>
+                <td>Ulčar</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Erik</td>
+                <td>Košmrlj</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Maks</td>
+                <td>Kovačič</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Nik</td>
+                <td>Šuster</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Tim</td>
+                <td>Terzer</td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>Matej</td>
+                <td>Jerak</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>Urban</td>
+                <td>Širca</td>
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td>Žiga</td>
+                <td>Stanek</td>
+            </tr>
+            <tr>
+                <th scope="row">12</th>
+                <td>Dušan</td>
+                <td>Stojčić</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Gašper</td>
+                <td>Šverko</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
-  </div>
-  <div class='row'>
-    <div class='col-md-offset-2 col-md-8'>
-      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-        <!-- Bottom Carousel Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#quote-carousel" data-slide-to="1"></li>
-          <li data-target="#quote-carousel" data-slide-to="2"></li>
-          <li data-target="#quote-carousel" data-slide-to="3"></li>
-          <li data-target="#quote-carousel" data-slide-to="4"></li>
-          <li data-target="#quote-carousel" data-slide-to="5"></li>
-        </ol>
-
-        <!-- Carousel Slides / Quotes -->
-        <div class="carousel-inner">
-
-          <!-- Quote 1 -->
-          <div class="item active">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="/assets/custom/images/quote/suske.jpg" style="width: 100px;height:100px;">
-                  <!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
-                </div>
-                <div class="col-sm-9">
-                  <p>PUBG player!</p>
-                  <small>Nik Šuster</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 2 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="/assets/custom/images/quote/stojcic.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Razredni zapohanc</p>
-                  <small>Dušan Stojčić</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 3 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="/assets/custom/images/quote/wagner.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Naš predsednik med obedom</p>
-                  <small>Oliver Wagner</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 4 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="/assets/custom/images/quote/maksi.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Brez komentarja</p>
-                  <small>Maks Kovačič</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-          <!-- Quote 5 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="/assets/custom/images/quote/papi.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Razredna maskota</p>
-                  <small>Jernej Chvatal</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-             <!-- Quote 6 -->
-          <div class="item">
-            <blockquote>
-              <div class="row">
-                <div class="col-sm-3 text-center">
-                  <img class="img-circle" src="/assets/custom/images/quote/sverko.jpg" style="width: 100px;height:100px;">
-                </div>
-                <div class="col-sm-9">
-                  <p>Koliko lukenj je v enem kilogramu sira?</p>
-                  <small>Gašper Šverko</small>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-        </div>
-
-        <!-- Carousel Buttons Next/Prev -->
-        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-      </div>
-    </div>
-  </div>
 </div>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Kaj je novega?</h1>
+        <ul style="font-family: Arial; font-size: large;">
+            <li><h2>dodani emoji-ji</h2></li>
+            <li><h2>Izboljšan UI</h2></li>
+        </ul>
+        <h1>Kaj prihaja?</h1>
+        <ul style="font-family: Arial; font-size: large;">
+            <li><h2>Zmožnost nalaganja slik</h2></li>
+        </ul>
+    </div>
+</div>
+
 {% endblock content %}

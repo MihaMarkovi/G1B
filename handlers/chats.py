@@ -2,6 +2,7 @@ from handlers.base import BaseHandler
 from google.appengine.api import users
 from google.appengine.api import memcache
 import uuid
+import emoji
 
 from models.chat import Chat
 from utils.decorators import validate_csrf
@@ -21,10 +22,11 @@ class Chats(BaseHandler):
         user = users.get_current_user()
 
         if not user:
-            return self.write("Please login before you're allowed to post a topic.")
+            return self.write("Please login before you're allowed to post a message.")
 
         text = self.request.get("text")
-        Chat.create(content=text, user=user)
+        final_text = emoji.emojize(text, use_aliases=True)
+        Chat.create(content=final_text, user=user)
 
         # new_topic = Chat(title=title, content=text, author_email=user.email())
         # new_topic.put()

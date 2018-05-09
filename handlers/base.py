@@ -3,8 +3,6 @@ import jinja2
 import webapp2
 from google.appengine.api import users
 
-from models.chat import Chat
-
 template_dir = os.path.join(os.path.dirname(__file__), "../templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=True)
 
@@ -48,8 +46,9 @@ class MainHandler(BaseHandler):
 
 class CookieAlertHandler(BaseHandler):
     def post(self):
-        self.response.set_cookie(key="cookie_law", value="accepted")
+        self.response.set_cookie("cookie_law", "accepted")
         return self.redirect_to("main-page")
+
 
 class AboutHandler(BaseHandler):
     def get(self):

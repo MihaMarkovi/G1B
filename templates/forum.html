@@ -7,19 +7,21 @@
 {% if logout_url %}
 
 {% for chat in seznam %}
-    <div class="container" style="border: solid; text-align: center; border-radius: 10px">
-        <div class="row">
-            <div class="col-sm-3">
-                <img class="img-circle" src="/assets/custom/images/users/user.jpg" style="width: 100px;height:100px; border: solid">
-                <h5>{{ chat.author_nickname }}</h5>
-            </div>
-            <div class="col-sm-6" style="margin-top: 5%">
-                <p> {{ chat.content }} </p>
-            </div>
-            <div class="col-sm-3" style="margin-top: 5%">
-                <span class="time-right"> {{ chat.updated.strftime("%d.%m.%Y at %H:%M GMT+0") }} </span>
-            </div>
+<div class="container"
+     style="border: solid; text-align: center; border-radius: 10px; background-color: rgba(255,255,255,0.7);">
+    <div class="row">
+        <div class="col-sm-3" style="margin-top: 1%">
+            <img class="img-circle" src="/assets/custom/images/users/user.jpg"
+                 style="width: 100px;height:100px; border: solid">
+            <h5>{{ chat.author_nickname }}</h5>
         </div>
+        <div class="col-sm-6" style="margin-top: 5%">
+            <p> {{ chat.content }} </p>
+        </div>
+        <div class="col-sm-3" style="margin-top: 5%">
+            <span class="time-right"> {{ chat.updated.strftime("%d.%m.%Y at %H:%M GMT+0") }} </span>
+        </div>
+    </div>
 </div><br>
 {% endfor %}
 <div class="container">
@@ -36,6 +38,9 @@
                     <button type="submit" class="btn btn-success">Potrdi</button>
                 </form>
             </div>
+            <div class="col-md-6">
+                <a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/"><h3>Emoji list</h3></a>
+            </div>
         </div>
     </div>
 </div>
@@ -47,4 +52,5 @@
     </div>
 </div>
 {% endif %}
+
 {% endblock content %}
